@@ -9,7 +9,129 @@
 </head>
 
 <body>
-    <h1>Portfolio website</h1>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">My Portfolio</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">My Skills</a></li>
+                    <li><a href="#">My Work</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <h3>Hii, I am Somnath Tyagi</h3>
+                <p>I am a <span class="typing"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="image-container">
+                <img src="images/2.png" alt="">
+            </div>
+            <div class="content">
+                <h3>About Me</h3>
+                <p>Hii, My name is Somnath Tyagi. I am a Student at AITR(Acropolis Institute of Technology and
+                    Research). </p>
+
+                <div class="tab-tiles">
+                    <p class="tab-links active-link" onclick="openTab(event,'skills')">Skills</p>
+                    <p class="tab-links" onclick="openTab(event,'experience')">Experience</p>
+                    <p class="tab-links" onclick="openTab(event,'education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>React JS</span><br>Experienced in building single-page applications using React JS.
+                        </li>
+                        <li><span>UI/UX</span><br>Proficient in creating user-friendly website layouts and designs.</li>
+                        <li><span>MongoDB</span><br>Experience in using MongoDB as a database for storing and retrieving
+                            data.</li>
+                        <li><span>Node JS</span><br>Experience in building REST APIs using Node JS and Express JS.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024-2025</span><br>Hoping for Interships</li>
+                        <li><span>2025-2026</span><br>Aiming to work as a Full Stack Developer</li>
+                        <li><span>2026-2027</span><br>Aiming to work as a Senior Developer</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019</span><br>Completed my 10th at Kendriya Vidyalaya , Gwalior</li>
+                        <li><span>2021</span><br>Completed my 12th at Kendriya Vidyalaya , Gwalior</li>
+                        <li><span>2025</span><br>Will complete my B.Tech in Computer Science & Engineering at Acropolis
+                            Institute of Technology and Research</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="skills">
+        <div class="container">
+            <h3>My Skills</h3>
+            <p>Here are some of my skills</p>
+            <div class="content">
+                <div class="col"><span>React JS</span><br><img src="images/react.png" alt="">Experienced in building
+                    single-page applications using React
+                    JS, Redux for state management, and React Router for navigation. Familiar with hooks and the context
+                    API for state management within components.
+                    <span class="progress-per">70%</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="col"><span>UI/UX Design</span><br><img src="images/ui-ux.png" alt="">Proficient in creating
+                    user-friendly website layouts and
+                    designs. Skilled in optimizing user experience through clear and simple design. Experience with
+                    responsive design to create applications that automatically conform to multiple screen
+                    sizes/devices. Also familiar with tools like Figma, Adobe Illustrator, etc.
+                    <span class="progress-per">85%</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="col"><span>MongoDB</span><br><img src="images/mongo.png" alt="">Experience in using MongoDB
+                    as a database for storing and
+                    retrieving data. Familiar with creating, reading, updating, and deleting data in MongoDB.
+                    Understanding of MongoDB's document-oriented model.
+                    <span class="progress-per">75%</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="col"><span>NodeJS</span><br>
+                    <img src="images/node.png" alt="">
+                    Experience in building REST APIs using Node JS and Express JS. Familiar with the MVC architecture
+                    for building web applications. Experience in using Mongoose for creating models and schemas for
+                    MongoDB. Also familiar with tools like Postman for testing APIs.
+                    <span class="progress-per">70%</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('.typing', {
+            strings: ['Web Developer', 'UI/UX Designer', 'Competitive Programmer'],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
 </body>
 
 </html>
