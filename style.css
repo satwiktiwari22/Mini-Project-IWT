@@ -677,22 +677,23 @@ nav ul li a:hover {
     font-weight: 500;
 }
 
-#contact .container .row .contact-right form input[type="submit"] {
+#contact .container .row .contact-right form button[type="submit"] {
     text-decoration: none;
+    color: var(--quaternary-color);
     background-color: var(--tertiary-color);
-    color: var(--primary-color);
     font-size: 20px;
     font-weight: 500;
+    width: 35%;
+    height: 59px;
     padding: 10px 20px;
-    border: 1px solid none;
+    border-style: none;
     border-radius: 5px;
     transition: 0.3s;
-    width: 35%;
     margin-right: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
-#contact .container .row .contact-right form input[type="submit"]:hover {
+#contact .container .row .contact-right form button[type="submit"]:hover {
     background-color: var(--tertiary-color);
     box-shadow: var(--tertiary-color) 0px 0px 10px 0px;
     color: var(--primary-color);

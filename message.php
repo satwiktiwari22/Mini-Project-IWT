@@ -3,21 +3,22 @@
     $email = $_POST['email'];
     $message = $_POST['message'];
 
-    $to = 'shashi.satwik22@gmail.com'; 
-    $subject = 'New Message from Website Contact Form';
-    $body = "From: $name\n E-Mail: $email\n Message:\n $message \n\n Regards,\n $name";
+    // replace with your database credentials
+    $mysqli = new mysqli('localhost', 'username', 'password', 'database');
 
-    if(!empty($name) && !empty($email) && !empty($message)){
-        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
-            echo 'Invalid Email';
-        } else {
-            if(mail($to, $subject, $body)){
-                echo 'Your message has been sent';
-            } else {
-                echo 'Sorry, an error occured. Please try again later.';
-            }
-        }        
-    } else {
-        echo 'All fields are required.';
+    if ($mysqli->connect_error) {
+        die('Connect Error (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
     }
+
+    $stmt = $mysqli->prepare('INSERT INTO messages (name, email, message) VALUES (?, ?, ?)');
+    $stmt->bind_param('sss', $name, $email, $message);
+
+    if ($stmt->execute()) {
+        echo "Message saved successfully!";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    $stmt->close();
+    $mysqli->close();
 ?>
