@@ -6,10 +6,219 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Project</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <h1>Portfolio website</h1>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">My Portfolio</h1>
+                <ul>
+                    <li><a href="/Mini-Project-IWT/index.html">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">My Skills</a></li>
+                    <li><a href="#work">My Work</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <h3>Hii, I am Somnath Tyagi</h3>
+                <p>I am a <span class="typing"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="image-container">
+                <img src="images/2.png" alt="">
+            </div>
+            <div class="content">
+                <h3>About Me</h3>
+                <p>Hii, My name is Somnath Tyagi. I am a Student at AITR(Acropolis Institute of Technology and
+                    Research). </p>
+
+                <div class="tab-tiles">
+                    <p class="tab-links active-link" onclick="openTab(event,'skills')">Skills</p>
+                    <p class="tab-links" onclick="openTab(event,'experience')">Experience</p>
+                    <p class="tab-links" onclick="openTab(event,'education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>React JS</span><br>Experienced in building single-page applications using React JS.
+                        </li>
+                        <li><span>UI/UX</span><br>Proficient in creating user-friendly website layouts and designs.</li>
+                        <li><span>MongoDB</span><br>Experience in using MongoDB as a database for storing and retrieving
+                            data.</li>
+                        <li><span>Node JS</span><br>Experience in building REST APIs using Node JS and Express JS.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024-2025</span><br>Hoping for Interships</li>
+                        <li><span>2025-2026</span><br>Aiming to work as a Full Stack Developer</li>
+                        <li><span>2026-2027</span><br>Aiming to work as a Senior Developer</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2018</span><br>Completed my 10th at New Horizon High School, India</li>
+                        <li><span>2020</span><br>Completed my 12th at Saraswati Vidya Mandir Inter College, India</li>
+                        <li><span>2025</span><br>Will complete my B.Tech in Computer Science & Engineering at Acropolis
+                            Institute of Technology and Research</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="skills">
+        <div class="container">
+            <h3>My Skills</h3>
+            <p>Here are some of my skills</p>
+            <div class="content">
+                <div class="col"><span>React JS</span><br><img src="images/react.png" alt="">Experienced in building
+                    single-page applications using React
+                    JS, Redux for state management, and React Router for navigation. Familiar with hooks and the context
+                    API for state management within components.
+                    <span class="progress-per">70%</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="col"><span>UI/UX Design</span><br><img src="images/ui-ux.png" alt="">Proficient in creating
+                    user-friendly website layouts and
+                    designs. Skilled in optimizing user experience through clear and simple design. Experience with
+                    responsive design to create applications that automatically conform to multiple screen
+                    sizes/devices. Also familiar with tools like Figma, Adobe Illustrator, etc.
+                    <span class="progress-per">85%</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="col"><span>MongoDB</span><br><img src="images/mongo.png" alt="">Experience in using MongoDB
+                    as a database for storing and
+                    retrieving data. Familiar with creating, reading, updating, and deleting data in MongoDB.
+                    Understanding of MongoDB's document-oriented model.
+                    <span class="progress-per">75%</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="col"><span>NodeJS</span><br>
+                    <img src="images/node.png" alt="">
+                    Experience in building REST APIs using Node JS and Express JS. Familiar with the MVC architecture
+                    for building web applications. Experience in using Mongoose for creating models and schemas for
+                    MongoDB. Also familiar with tools like Postman for testing APIs.
+                    <span class="progress-per">70%</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="work">
+        <div class="container">
+            <h3>My Work</h3>
+            <p>Here are some of my projects</p>
+            <div class="content">
+                <div class="col">
+                    <div class="image-container">
+                        <img src="images/work1.png" alt="">
+                        <div class="overlay">
+                            <a href="https://github.com/somtyagi20/Minor-Project-1" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h4>Real Time Chat Application using MERN Stack</h4>
+                        <p>This project is a Real-Time Chat Application built using the MERN stack, which includes
+                            MongoDB, Express.js, React.js, and Node.js. The application allows users to create an
+                            account, log in, and start sending messages in real-time.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="image-container">
+                        <img src="images/work2.png" alt="">
+                        <div class="overlay">
+                            <a href=""><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h4>Drum kit using JS</h4>
+                        <p>This project is a fun and interactive Drum Kit game built primarily using JavaScript. The
+                            game allows users to play different drum sounds by pressing specific keys on their keyboard,
+                            creating a virtual drumming experience.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="image-container">
+                        <img src="images/work3.png" alt="">
+                        <div class="overlay">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h4>AI ChatBot using GPT</h4>
+                        <p>This project is an AI ChatBot built using the GPT (Generative Pretrained Transformer) model.
+                            The ChatBot is capable of understanding and responding to user inputs in a conversational
+                            manner, providing a human-like interaction experience.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h3>Contact Me</h3>
+                    <p>Feel free to contact me for any queries</p>
+                    <p><i class="fas fa-paper-plane"></i>somnathtyagi2002@gmail.com</p>
+                    <p><i class="fas fa-phone-alt"></i>+91 6260 000 000</p>
+                    <div class="social-icons">
+                        <a href="" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="RESUME.pdf" download class="btn btn2">Download CV<i class="fa-solid fa-download"
+                            style="margin: 5px;"></i></a>
+                </div>
+                <div class="contact-right">
+                    <form action="#" id="contact-form" preventDefault>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Type a Message..." required></textarea>
+                        <button type="submit" name="submit">Send</button>
+                        <input type="reset" value="Reset">
+                        <div class="status-message">Sending Message....</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js">
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('.typing', {
+            strings: ['Web Developer', 'UI/UX Designer', 'Competitive Programmer'],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/dd86d31615.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
