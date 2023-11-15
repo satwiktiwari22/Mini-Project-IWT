@@ -28,15 +28,15 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-let form = document.getElementsByTagName("form");
-let statusmsg = document.getElementsByClassName("status-message");
+let form = document.getElementById("contact-form");
+let statusmsg = document.getElementsByClassName("status-message")[0];
 
-form.onSubmit = (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   statusmsg.style.display = "block";
   let formData = new FormData(form);
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", form.getAttribute("action"), true);
+  xhr.open("POST", "message.php", true);
   xhr.onload = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
       let response = xhr.response;
@@ -48,7 +48,10 @@ form.onSubmit = (e) => {
         statusmsg.innerHTML = response;
         statusmsg.style.color = "red";
       }
+      setTimeout(() => {
+        statusmsg.style.display = "none";
+      }, 4000);
     }
   };
   xhr.send(formData);
-};
+});

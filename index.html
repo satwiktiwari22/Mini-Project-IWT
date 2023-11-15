@@ -193,11 +193,11 @@
                             style="margin: 5px;"></i></a>
                 </div>
                 <div class="contact-right">
-                    <form action="#">
+                    <form action="#" id="contact-form" preventDefault>
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="message" placeholder="Type a Message..." required></textarea>
-                        <input type="submit" name="submit" value="Send">
+                        <button type="submit" name="submit">Send</button>
                         <input type="reset" value="Reset">
                         <div class="status-message">Sending Message....</div>
                     </form>
