@@ -474,6 +474,10 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
+#work .container .content .col .image-container .overlay a i {
+    width: 20px;
+}
+
 
 #work .container .content .col .image-container img {
     width: 100%;
